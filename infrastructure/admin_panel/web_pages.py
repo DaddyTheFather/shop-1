@@ -11,7 +11,7 @@ from infrastructure.database.models.purchase import Purchase
 class Users(ModelView, model=User):
     @action(
         name="mailing",
-        label="Общая Рассылка",
+        label="General Mailing",
         add_in_list=True,
     )
     async def send_mailing(self, request: Request):
@@ -22,18 +22,18 @@ class Users(ModelView, model=User):
     can_export = True
     can_edit = True
     can_delete = True
-    name_plural = "Пользователи"
+    name_plural = "Users"
     column_sortable_list = [User.created_at]
     column_searchable_list = [User.user_id]
     export_types = ["csv", "xls"]
     column_labels = {
-        User.created_at: "Дата регистрации",
-        User.user_id: "ID пользователя",
-        User.username: "Никнейм",
-        User.full_name: "Полное имя",
-        User.language_code: "Язык",
-        User.is_premium: "Премиум",
-        User.is_bot: "Бот",
+        User.created_at: "Registration Date",
+        User.user_id: "User ID",
+        User.username: "Nickname",
+        User.full_name: "Full Name",
+        User.language_code: "Language",
+        User.is_premium: "Premium",
+        User.is_bot: "Bot",
     }
 
 
@@ -43,18 +43,18 @@ class Features(ModelView, model=Feature):
     can_export = True
     can_edit = True
     can_delete = True
-    name_plural = "Пожелания"
+    name_plural = "Wishes"
     export_types = ["csv", "xls"]
     column_sortable_list = [Feature.created_at]
     column_searchable_list = [Feature.feature_id, Feature.software]
     column_labels = {
-        Feature.feature_id: "ID пожелания",
-        Feature.user_id: "ID пользователя",
-        Feature.software: "Программа",
-        Feature.created_at: "Дата регистрации сообщения",
-        Feature.feature_message: "Сообщение",
-        Feature.status: "Статус",
-        Feature.username: "Никнейм",
+        Feature.feature_id: "Wish ID",
+        Feature.user_id: "User ID",
+        Feature.software: "Software",
+        Feature.created_at: "Message Registration Date",
+        Feature.feature_message: "Message",
+        Feature.status: "Status",
+        Feature.username: "Nickname",
     }
 
 
@@ -64,25 +64,25 @@ class Errors(ModelView, model=Error):
     can_export = True
     can_edit = True
     can_delete = True
-    name_plural = "Ошибки"
+    name_plural = "Errors"
     export_types = ["csv", "xls"]
     column_sortable_list = [Error.created_at]
     column_searchable_list = [Error.error_id, Error.software]
     column_labels = {
-        Error.error_id: "ID пожелания",
-        Error.user_id: "ID пользователя",
-        Error.software: "Программа",
-        Error.created_at: "Дата регистрации сообщения",
-        Error.error_message: "Сообщение",
-        Error.status: "Статус",
-        Error.username: "Никнейм",
+        Error.error_id: "Wish ID",
+        Error.user_id: "User ID",
+        Error.software: "Software",
+        Error.created_at: "Message Registration Date",
+        Error.error_message: "Message",
+        Error.status: "Status",
+        Error.username: "Nickname",
     }
 
 
 class Purchases(ModelView, model=Purchase):
     @action(
         name="mailing",
-        label="Общая Рассылка",
+        label="General Mailing",
         add_in_list=True,
     )
     async def send_mailing(self, request: Request):
@@ -93,18 +93,18 @@ class Purchases(ModelView, model=Purchase):
     can_export = True
     can_edit = True
     can_delete = True
-    name_plural = "Покупки"
+    name_plural = "Purchases"
     export_types = ["csv", "xls"]
     column_sortable_list = [Purchase.created_at]
     column_searchable_list = [Purchase.purchase_id, Purchase.software]
     column_labels = {
-        Purchase.purchase_id: "ID заказа",
-        Purchase.user_id: "ID пользователя",
-        Purchase.software: "Программа",
-        Purchase.created_at: "Дата регистрации сообщения",
-        Purchase.payment_method: "Метод оплаты",
-        Purchase.status: "Статус",
-        Purchase.username: "Никнейм",
+        Purchase.purchase_id: "Order ID",
+        Purchase.user_id: "User ID",
+        Purchase.software: "Software",
+        Purchase.created_at: "Message Registration Date",
+        Purchase.payment_method: "Payment Method",
+        Purchase.status: "Status",
+        Purchase.username: "Nickname",
     }
 
 

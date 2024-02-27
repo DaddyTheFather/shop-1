@@ -3,19 +3,19 @@ from aiogram.utils.markdown import bold
 
 class UserMessages:
     def buy_translate_text():
-        text = f"""{bold("ВАЖНО! Переводы работают только для платформы WINDOWS!")}
+        text = f"""{bold("IMPORTANT! This is only for testing, dont buy anything here!")}
 
-Стоимость переводов:
-• SF SEO Spider 19.4 — 95 рублей или 1 USDT TRC20;
-• SF SEO Spider 19.2 — 95 рублей или 1 USDT TRC20;
-• SF Log File Analyser 6.0 — 95 рублей или 1 USDT TRC20;
-• SF Log File Analyser 5.3 — 95 рублей или 1 USDT TRC20;
+Pricing:
+• SF SEO Spider 19.4 — 95 rubles or 1 USDT TRC20;
+• SF SEO Spider 19.2 — 95 rubles or 1 USDT TRC20;
+• SF Log File Analyser 6.0 — 95 rubles or 1 USDT TRC20;
+• SF Log File Analyser 5.3 — 95 rubles or 1 USDT TRC20;
         """
 
         return text.replace("\\", "")
 
     def choose_software_text():
-        return f"""{bold("Выберите версию программы:")}
+        return f"""{bold("Choose one:):")}
 • SF SEO Spider 19.4
 • SF SEO Spider 19.2
 • SF Log File Analyser 6.0
@@ -23,23 +23,23 @@ class UserMessages:
 """
 
     def instruction_report_text():
-        text = f"""{bold("Пожалуйста, напишите в произвольной форме где вы нашли ошибку и по возможности сделайте скриншот в виде ссылки.")}"""
+        text = f"""{bold("Please describe in free form where you found the error and, if possible, make a screenshot in the form of a link.")}"""
 
         return text.replace("\\", "")
 
     def instruction_feature_text():
-        text = f"""{bold("Пожалуйста, напишите в произвольной форме свои предложения по улучшению перевода и по возможности сделайте скриншот в виде ссылки.")}"""
+        text = f"""{bold("Please write in free form your suggestions for improving the translation and, if possible, make a screenshot in the form of a link.")}"""
         return text.replace("\\", "")
 
     def confirm_payment(chosen_software: str):
-        text = f"""Вы выбрали перевод для {bold(chosen_software)}. Для оплаты нажмите кнопку «Оплатить»"""
+        text = f"""You have selected a translation for {bold(chosen_software)}. To proceed with payment, press the “Pay” button"""
         return text.replace("\\", "")
 
     def confirm_request():
-        return "Спасибо за обращение! Оно будет рассмотрено в ближайшее время."
+        return "Thank you for your request! It will be reviewed as soon as possible."
 
 
 class AdminMessages:
     def greet_admin():
-        text = f"""{bold("Приветствую Админ! Выберете действие:")}"""
+        text = f"""{bold("Greetings Admin! Choose an action:")}"""
         return text.replace("\\", "")

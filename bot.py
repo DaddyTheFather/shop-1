@@ -18,7 +18,7 @@ bot = Bot(token=config.tg_bot.token, parse_mode="HTML")
 
 async def on_startup(bot: Bot, admin_ids: list[int]):
     time_now = datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S")
-    await broadcaster.broadcast(bot, admin_ids, f"Бот запущен!\nТекущее время: {time_now}")
+    await broadcaster.broadcast(bot, admin_ids, f"Bot launched!\nCurrent time: {time_now}")
 
 
 def register_global_middlewares(dp: Dispatcher, config: Config, session_pool):

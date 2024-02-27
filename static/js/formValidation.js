@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     textarea.oninvalid = function (event) {
         event.target.setCustomValidity(
-            "Заполните сообщение перед отправкой"
+            "Please fill out the message before sending"
         );
     };
 

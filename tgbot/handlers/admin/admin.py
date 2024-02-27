@@ -14,5 +14,5 @@ admin_router.message.filter(AdminFilter())
 @admin_router.message(CommandStart())
 async def user_start(message: Message):
     await message.answer(
-        text="Приветствую в нашем боте!", reply_markup=UserKeyboards.menu_keyboard()
+        text="Welcome to our Shop!", reply_markup=UserKeyboards.menu_keyboard()
     )

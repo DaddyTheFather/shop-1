@@ -17,7 +17,7 @@ user_router = Router()
 @user_router.message(CommandStart())
 async def user_start(message: Message):
     await message.answer(
-        text="Приветствую в нашем боте!", reply_markup=UserKeyboards.menu_keyboard()
+        text="Welcome to our Shop!", reply_markup=UserKeyboards.menu_keyboard()
     )
 
 
@@ -60,7 +60,7 @@ async def back_to_pay(query: CallbackQuery, state: FSMContext):
 @user_router.callback_query(F.data == "pay_order")
 async def choose_payment(query: CallbackQuery):
     await query.message.edit_text(
-        text="Выберите способ оплаты:", reply_markup=UserKeyboards.payments_keyboard()
+        text="Choose a payment method:", reply_markup=UserKeyboards.payments_keyboard()
     )
 
 
@@ -76,7 +76,7 @@ async def back_pay_order(query: CallbackQuery):
 @user_router.callback_query(F.data == "back_software_chs")
 async def back_software_chs(query: CallbackQuery):
     await query.message.edit_text(
-        text="Приветствую в нашем боте!", reply_markup=UserKeyboards.menu_keyboard()
+        text="Welcome to our Shop!", reply_markup=UserKeyboards.menu_keyboard()
     )
 
 
@@ -195,5 +195,5 @@ async def send_feature_ticket(message: Message, state: FSMContext):
 @user_router.message()
 async def undefined_message(message: Message):
     await message.reply(
-        text="Команда не найдена! Попробуйте вернуться в главное меню: /start"
+        text="Command not found! Try returning to the main menu: /start"
     )
